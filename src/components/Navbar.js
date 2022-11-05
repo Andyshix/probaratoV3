@@ -13,17 +13,6 @@ function Navbar() {
         setOpenLinks(!openLinks);
     }
     
-    const test = () => { 
-        let aux = document.getElementById("cerrarsesion")
-        let pos = document.getElementById("iniciarsesion")
-        let aux2 = document.getElementById("cerrarsesion2")
-        let pos2 = document.getElementById("iniciarsesion2")
-        aux.style.display="flex";
-        aux2.style.display="flex";
-        pos.style.display="none" ;
-        pos2.style.display="none" ;
-     }
-    
     const test2 = () => { 
         let aux = document.getElementById("cerrarsesion")
         let pos = document.getElementById("iniciarsesion")
@@ -44,7 +33,7 @@ function Navbar() {
         <div className="rightSide">
             <Link to="/">Home</Link>
             <Link to="/registrarNegocio" id="iniciarsesion">Registrar Negocio</Link>
-            <Link to="/" id="iniciarsesion2" onClick={test}>Iniciar sesion</Link>
+            <Link to="/ini" id="iniciarsesion2">Iniciar sesion</Link>
             <Link to="/registrarPromocion" id="cerrarsesion">Registrar Promocion</Link>
             <Link to="/"id="cerrarsesion2"onClick={test2}>Cerrar Sesion</Link>
             <button onClick={toogleNavbar}>
