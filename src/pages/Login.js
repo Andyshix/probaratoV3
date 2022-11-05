@@ -40,6 +40,7 @@ iniciarSesion=()=>{
   if(this.state.form.nick.length < 4 || this.state.form.password.length < 8 ){
     alert('El nick es menor a 4 caracteres o el password es menor a 8 caracteres');
   }else{
+    test();
     axios.post(baseUrl, this.state.form)
     .then(response=>{
       console.log(response); 
@@ -81,7 +82,7 @@ iniciarSesion=()=>{
                   <input type="password"  name="password" placeholder="Password"onChange={this.handleChange}/>
                   <div></div>
                   {/* <button type="submit" className='btn'onClick={this.manejadorBoton} >Iniciar Sesión</button> */}
-                   <button  type="submit" className='btn' onClick={this.iniciarSesion}>Iniciar Sesión</button> 
+                   <button id="iniciosesion" type="submit" className='btn' onClick={this.iniciarSesion}>Iniciar Sesión</button> 
                   <div></div>
                 </form>
                     
@@ -96,6 +97,17 @@ iniciarSesion=()=>{
 
     }
     
+}
+
+const test = () => {
+  let aux = document.getElementById("cerrarsesion")
+  let pos = document.getElementById("iniciarsesion")
+  let aux2 = document.getElementById("cerrarsesion2")
+  let pos2 = document.getElementById("iniciarsesion2")
+  aux.style.display="flex";
+  aux2.style.display="flex";
+  pos.style.display="none" ;
+  pos2.style.display="none"
 }
 
 export default Login
